@@ -13,3 +13,12 @@ _includes/notes_graph.json
 
 # Obsidian config
 .obsidian/
+
+# Local Netlify folder
+.netlify
+
+# Do not publicly sync actual notes
+_notes
+assets
+_statics
+index.md
