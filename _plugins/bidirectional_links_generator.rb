@@ -51,6 +51,12 @@ class BidirectionalLinksGenerator < Jekyll::Generator
           anchor_tag
         )
 
+        image_tag = "<img src=\"/\\1.\\2\" style=\"max-height: 80vh;\">"
+        current_note.content.gsub!(
+          /!\[\[(.+?)\.(jpg|png|jpeg|gif)\]\]/i,
+          image_tag
+        )
+
         # Replace double-bracketed links using note filename
         # [[cats]]
         current_note.content.gsub!(

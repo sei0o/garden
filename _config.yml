@@ -33,7 +33,10 @@ collections:
   notes:
     output: true
     permalink: /:slug
-
+  statics:
+    output: true
+    permalink: /:path:output_ext
+  
 defaults:
   - scope:
       path: "**/*"
