@@ -1,0 +1,12 @@
+[Unit]
+Description=Deploy wiki once a day
+After=network.target
+
+[Service]
+User=sei0o
+Restart=always
+RestartSec=86400s
+ExecStart=/home/sei0o/Sync/scripts/garden.sh build-deploy
+
+[Install]
+WantedBy=default.target
